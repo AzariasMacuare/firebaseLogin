@@ -1,0 +1,26 @@
+{
+  "name": "newN",
+  "version": "1.0.0",
+  "description": "$env:GOOGLE_APPLICATION_CREDENTIALS=\"C:\\Users\\Andrea Aguillon\\Desktop\\sampleApp\\myfirstfirebase-1-firebase-adminsdk-leqvx-f76142d4f9.json\"",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcrypt": "^5.0.0",
+    "bootstrap": "^4.5.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "express-session": "^1.17.1",
+    "firebase-admin": "^8.12.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

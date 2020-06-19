@@ -1,0 +1,27 @@
+<div class="container col-md-5 offset-md-3 bg-dark text-white mt-3">
+
+        <h1 class="ml-4">Por favor antes de seguir <br> Registrese aqui abajo</h1>
+
+        <form class="bg-dark p-4 rounded-lg" action="/userNew" method="POST">
+
+                <div class="bg-light form-group">
+                    <input type="text" class="form-control" autocomplete="off" name="userName" placeholder="Usuario" autofocus required>
+                </div>
+        
+                <div class="bg-light form-group">
+                    <input type="password" class="form-control" autocomplete="off" name="userPassword" placeholder="Contraseña" required>
+                </div>
+        
+                <div class="form-group pb-3 form-check text-white">
+                    <input class="form-check-input" type="checkbox" checked name="terminos" required>
+                    <h6 class="form-check-label">¿Acepta los terminos?</h6>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button class="btn btn-success" type="submit">
+                    Entrar
+                    </button>
+                    <h6>Si ya tiene una cuenta <a href="/login">Inicie Session</a></h6>
+                </div>
+                
+        </form>
+</div>

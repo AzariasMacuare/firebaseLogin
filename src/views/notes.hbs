@@ -1,0 +1,88 @@
+<div class="d-flex justify-content-between">
+    <h1 id="HOLA" >Bienvenido sr. {{userName}}</h1>
+    <div class="">
+        <a href="/closeSession" class="btn btn-primary mt-1">
+        Cerrar Sesion
+        </a>
+    </div>
+    
+</div>
+<div class="row bg-secondary">   
+    
+    <div class="col-md-3 offset-md-1 mt-5">
+    
+        <div class="card">
+
+
+            <div class="card-header bg-dark d-flex justify-content-center">
+                    <h1 class="text-white">Inicio de Sesion</h1>
+            </div>
+
+
+            <div class="card-body">
+
+            </div>
+
+
+            <div class="card-footer bg-dark text-white">
+
+                <form action="/notes" method="POST">
+
+                    <div class="form-group">
+                        <input type="hidden" name="userName" value="{{userName}}">
+                        <input type="hidden" name="userKey" value="{{userKey}}">
+                        <input class="form-control" type="text" autocomplete="off" name="nombre" placeholder="Ingrese Su Nombre" autofocus required>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="text" autocomplete="off" name="apellido" placeholder="Ingrese su apellido" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="form-control" type="number" name="age" placeholder="Ingrese su Edad" required>
+                    </div>
+
+                    <div class="form-group">
+                        <button id="enviar" type="submit" class="btn btn-success btn-block">
+                            Enviar
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="col-md-6 d-flex justify-content-around pt-5 bg-secondary">
+
+        {{#each person}}
+
+            <div class="card col-md-4">
+                <div class="card-header bg-dark text-white">
+                    <h6>Nombre: {{name}}</h6>
+                </div>
+
+                <div class="card-header">
+                    <h6>Apellido: {{lastname}}</h6>
+                </div>
+
+                <div class="card-footer">
+                    <h6>Edad: {{age}}</h6>
+                </div>
+
+
+                        <a class="btn btn-danger btn-block" href="/delete/{{@key}}">
+                            Eliminar    
+                        </a>
+                        
+                        <a class="btn btn-info btn-block" href="/edit/{{@key}}">
+                            Editar
+                        </a>
+                </div>            
+                    
+        {{/each}}
+</div>
+{{!-- 
+<script src="reqNote.js"></script> --}}

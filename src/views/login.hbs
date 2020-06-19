@@ -1,0 +1,28 @@
+<div class="container col-md-3 offset-md-4 mt-3 pt-1 pb-1 bg-secondary card">
+    {{!-- Quede pendiente aqui. El formulario envia los datos a una url por el metodo POST
+        y Luego esa misma url despues de procesar los datos hace un "Redirect/". 
+
+        Tambien me falta poner la opcion de si no tiene una cuenta para enviarlo
+         a otra página en donde le muestre el otro formulario para una persona nueva. 
+         
+         Y lo que dije arriba se va a hacer sobre la base del nuevo formulario
+     --}}
+    <form class="bg-dark p-4 rounded-lg" action="/userExist" method="POST">
+
+            <div class="bg-light form-group">
+                <input type="text" class="form-control" autocomplete="off" name="userName" placeholder="Usuario" autofocus required>
+            </div>
+    
+            <div class="bg-light form-group">
+                <input type="password" class="form-control" autocomplete="off" name="userPassword" placeholder="Contraseña" required>
+            </div>
+    
+            <div class="d-flex justify-content-between text-white">
+                <button class="btn btn-success" type="submit">
+                    Entrar
+                </button>
+                
+                <h6 class="ml-4">Si no tiene una cuenta <a href="/">Registrese</a></h6>
+            </div>
+    </form>
+</div>

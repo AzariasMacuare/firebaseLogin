@@ -1,0 +1,20 @@
+<div class="container col-md-3 mt-3 offset-md-1">
+    <div class="card bg-light">
+        <form action="/editing" method="POST">
+                <div class="card-header bg-dark text-white">
+                    <input type="text" name="nombre" value="{{person.name}}">
+                </div>
+
+                <div class="card-body">
+                    <input type="text" name="apellido" value="{{person.lastname}}">
+                </div>
+
+                <div class="card-footer">
+                    <input type="text" name="age" value="{{person.age}}">
+                </div>
+                    <button class="btn btn-success mb-3 btn-block" type="submit">
+                        Guardar
+                </button>
+        </form>
+    </div>
+</div>
